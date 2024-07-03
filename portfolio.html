@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website Nurhamizah</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">Resume.</a>
+    
+        <nav class="navbar">
+            <a href="index.html" style="--i:1;">Home</a>
+            <a href="about.html" style="--i:2;">About Me</a>
+            <a href="education.html" style="--i:3;">Education</a>
+            <a href="experience.html" style="--i:4;">Experience</a>
+            <a href="portfolio.html" style="--i:5;" class="active">Portfolio</a>
+            <a href="contact.html" style="--i:6;">Contact Me</a>
+
+        </nav>
+    </header>
+
+    <section id="Portfolio">
+        <p class="heading-p-portfolio">This is My</p>
+        <h1 class="heading-portfolio">Previous Work</h1>
+
+    
+    <div class="slideshow-container">
+
+        <div class="mySlides">
+            <div class="numbertext">1/4</div>
+            <img src="image/logo1.PNG" style="width: 45%;">
+            <div class="text">LOGO DESIGN</div>
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">2/4</div>
+            <img src="image/logo2.PNG" style="width: 45%;">
+            <div class="text">LOGO DESIGN</div>
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">3/4</div>
+            <img src="image/poster1.png" style="width: 45%;">
+            <div class="text">POSTER DESIGN</div>
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">4/4</div>
+            <img src="image/packaging1.png" style="width: 45%;">
+            <div class="text">PACKAGING DESIGN</div>
+        </div>
+
+        <a class = "prev" onclick="plusSlides(-1)"><</a>
+        <a class = "next" onclick="plusSlides(1)">></a>
+    </div>
+
+   <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i=0; i<slides.length;i++){
+        slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+        }
+
+    </script>
+
+
+
+</body>
+</html>
